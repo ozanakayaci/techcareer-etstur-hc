@@ -9,6 +9,8 @@ module.exports = merge(common, {
 
     static: ["./public"],
 
+    historyApiFallback: true,
+
     open: true,
 
     hot: true,
