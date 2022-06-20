@@ -15,7 +15,9 @@ function Events() {
         return (
           <div>
             <Link to={`/eventPage/${item.event_id}`}>
-              {category == item.category.toLowerCase() && item.name}
+              {category == item.category.toLowerCase() &&
+                item.status == "upcoming" &&
+                item.name}
             </Link>
           </div>
         );
