@@ -33,6 +33,12 @@ $background-gradient: linear-gradient(
   font-family: $font-nav;
   font-weight: 600;
 }
+.navbar-comp {
+  display: flex;
+  justify-content: space-between;
+  width: 1000px;
+  align-items: center;
+}
 .category-buttons {
   line-height: 65px;
   display: flex;
