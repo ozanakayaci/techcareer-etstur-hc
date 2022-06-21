@@ -29,6 +29,9 @@ function Navbar() {
           <Link className="navbar-button" to="/events/sport">
             Sport
           </Link>
+          <Link className="navbar-button" to="/events/pastevents">
+            Past Events
+          </Link>
         </div>
         <Search />
       </div>
