@@ -1,5 +1,8 @@
 import React from "react";
 
+//css
+import "./Navbar.scss";
+
 //react router
 import { Link } from "react-router-dom";
 

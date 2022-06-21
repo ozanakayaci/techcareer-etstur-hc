@@ -17,16 +17,18 @@ const App = () => {
   return (
     <div className="App">
       <Navbar />
-      <Routes>
-        <Route path="/" exact element={<Homepage />} />
-        <Route path="eventPage">
-          <Route path=":event_id" element={<EventPage />} />
-        </Route>
-        <Route path="events">
-          <Route path=":category" element={<Events />} />
-        </Route>
-        <Route path="*" component={Error404} />
-      </Routes>
+      <div className="pages">
+        <Routes>
+          <Route path="/" exact element={<Homepage />} />
+          <Route path="eventPage">
+            <Route path=":event_id" element={<EventPage />} />
+          </Route>
+          <Route path="events">
+            <Route path=":category" element={<Events />} />
+          </Route>
+          <Route path="*" component={Error404} />
+        </Routes>
+      </div>
     </div>
   );
 };
