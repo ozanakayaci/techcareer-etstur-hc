@@ -5,15 +5,15 @@ import "./Search.scss";
 
 function Search() {
   return (
-    <div class="search-container">
+    <div className="search-container">
       <input
         type="text"
         name="search"
         placeholder="Search..."
-        class="search-input"
+        className="search-input"
       />
-      <a href="#" class="search-btn">
-        <i class="fas fa-search"></i>
+      <a href="#" className="search-btn">
+        <i className="fas fa-search"></i>
       </a>
     </div>
   );
