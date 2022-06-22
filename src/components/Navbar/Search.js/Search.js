@@ -1,9 +1,20 @@
 import React from "react";
 
+import { useState } from "react";
+
+import { Link } from "react-router-dom";
+
 //css
 import "./Search.scss";
 
 function Search() {
+  const [filteredWord, setFilteredWord] = useState("");
+
+  let handleChange = (e) => {
+    setFilteredWord(e.target.value);
+    console.log(filteredWord);
+  };
+
   return (
     <div className="search-container">
       <input
@@ -11,10 +22,11 @@ function Search() {
         name="search"
         placeholder="Search..."
         className="search-input"
+        onChange={handleChange}
       />
-      <a href="#" className="search-btn">
+      <Link className="search-btn" to={`/events/search/${filteredWord}`}>
         <i className="fas fa-search"></i>
-      </a>
+      </Link>
     </div>
   );
 }
