@@ -17,8 +17,18 @@
 ### Prerequisites
 
 - npm
+
   ```sh
   npm install npm@latest -g
+  ```
+
+  or
+
+  -yarn
+
+  ```sh
+  npm install --global yarn
+
   ```
 
 ### Installation
@@ -28,11 +38,23 @@
    git clone https://github.com/ozanakayaci/techcareer-etstur-hc.git
    ```
 2. Install NPM packages
+
    ```sh
    npm install
+
+   or
+
+   yarn install
+
    ```
+
 3. Runs the app in the development mode.
 
    ```sh
    npm start
+
+   or
+
+   yarn start
+
    ```
