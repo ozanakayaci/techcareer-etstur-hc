@@ -27,7 +27,7 @@ function EventPage() {
   return (
     <div className="event-page">
       <h1>
-        {event.name} {event.location.name}
+        {event.name}, {event.location.name}
       </h1>
       <div className="image-slider">
         {event.images.map((item, i) => {
@@ -58,30 +58,27 @@ function EventPage() {
         </a>
       </div>
       <div className="event-info">
-        <div className="info-box">
+        <div>
           <div>
-            <div className="cards">
+            <div className="info-card">
               <Link to={`/eventPage/${event.event_id}`}>
                 <div className="box">
-                  <div className="date-box">
-                    <div className="day">{date.slice(8, 10)}</div>
-                    <div>
-                      <div>{date.slice(0, 3)}</div>
-                      <div>{date.slice(4, 7)}</div>
-                      <div>{date.slice(11, 15)}</div>
+                  <div className="info-box">
+                    <div className="date-box">
+                      <div className="day">{date.slice(8, 10)}</div>
+                      <div>
+                        <div>{date.slice(0, 3)}</div>
+                        <div>{date.slice(4, 7)}</div>
+                        <div>{date.slice(11, 15)}</div>
+                      </div>
+                    </div>
+                    <div className="nlc">
+                      <Link to={`/events/location/${event.location.name}`}>
+                        <div className="faint">{event.location.name}</div>
+                      </Link>
                     </div>
                   </div>
-                  <div className="nlc">
-                    <Link to={`/events/location/${event.location.name}`}>
-                      <div className="faint">{event.location.name}</div>
-                    </Link>
-                    <div>
-                      <span>{event.category.slice(0, 1).toUpperCase()}</span>
-                      <span className="faint">
-                        {event.category.slice(1, event.category.length)}
-                      </span>
-                    </div>
-                  </div>
+                  <div>{event.description}</div>
                 </div>
               </Link>
             </div>

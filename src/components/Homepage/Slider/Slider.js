@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 //router
 import { Link } from "react-router-dom";
@@ -46,7 +46,10 @@ function Slider(data) {
                     <span>{item.name}</span>
                     <span className="date">{item.date}</span>
                   </div>
-                  <Link to={`/events/location/${item.location.name}`}>
+                  <Link
+                    className="card-location"
+                    to={`/events/location/${item.location.name}`}
+                  >
                     <span>{item.location.name}</span>'da
                   </Link>
                 </Link>

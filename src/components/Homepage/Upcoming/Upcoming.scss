@@ -4,7 +4,7 @@ $primary-color: rgba(144, 55, 73, 1);
   border: 2px solid rgb(201, 201, 201);
   border-radius: 10px;
   padding: 18px;
-  width: 400px;
+  width: 330px;
   max-height: 720px;
 }
 .upcoming-box,
@@ -34,6 +34,7 @@ $primary-color: rgba(144, 55, 73, 1);
 }
 
 .nlc {
+  width: 200px;
   margin-left: 15px;
   .faint {
     color: rgb(151, 151, 151);
@@ -50,7 +51,7 @@ $primary-color: rgba(144, 55, 73, 1);
   }
 }
 .mini-img {
-  height: 66px;
+  height: 36px;
   width: 66px;
   padding-left: auto;
   img {
@@ -75,4 +76,15 @@ $primary-color: rgba(144, 55, 73, 1);
 .date-filter {
   padding-right: 30px;
   padding-left: 20px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .upcoming-events {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
 }
