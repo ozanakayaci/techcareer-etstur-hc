@@ -1,6 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
+//date range filter css files
+import "react-date-range/dist/styles.css"; // main css file
+import "react-date-range/dist/theme/default.css"; // theme css file
+
 //react router
 import { BrowserRouter } from "react-router-dom";
 
