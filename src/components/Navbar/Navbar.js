@@ -17,19 +17,19 @@ function Navbar() {
           Get<span>-</span>ket
         </Link>
         <div className="category-buttons">
-          <Link className="navbar-button" to="/events/music">
+          <Link className="navbar-button" to="/events/category/music">
             Music
           </Link>
-          <Link className="navbar-button" to="/events/theatre">
+          <Link className="navbar-button" to="/events/category/theatre">
             Theatre
           </Link>
-          <Link className="navbar-button" to="/events/art">
+          <Link className="navbar-button" to="/events/category/art">
             Art
           </Link>
-          <Link className="navbar-button" to="/events/sport">
+          <Link className="navbar-button" to="/events/category/sport">
             Sport
           </Link>
-          <Link className="navbar-button" to="/events/pastevents">
+          <Link className="navbar-button" to="/events/category/pastevents">
             Past Events
           </Link>
         </div>
