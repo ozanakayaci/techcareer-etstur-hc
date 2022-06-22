@@ -5,6 +5,10 @@ body {
   margin: 0;
   background-color: #ffeeee;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 .App {
   display: flex;
   flex-direction: column;
