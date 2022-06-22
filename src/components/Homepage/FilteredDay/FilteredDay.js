@@ -27,6 +27,7 @@ function FilteredDay() {
 
   return (
     <div className="date-filter">
+      <h1>Select Date</h1>
       <div>
         <DateRangePicker
           onChange={(item) => setSelectedDate([item.selection])}
