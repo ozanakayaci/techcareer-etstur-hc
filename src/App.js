@@ -24,7 +24,15 @@ const App = () => {
             <Route path=":event_id" element={<EventPage />} />
           </Route>
           <Route path="events">
-            <Route path=":category" element={<Events />} />
+            <Route path="category">
+              <Route path=":category" element={<Events />} />
+            </Route>
+            <Route path="date">
+              <Route path=":date_range" element={<Events />} />
+            </Route>
+            <Route path="location">
+              <Route path=":location" element={<Events />} />
+            </Route>
           </Route>
           <Route path="*" component={Error404} />
         </Routes>
