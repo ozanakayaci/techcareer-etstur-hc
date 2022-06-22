@@ -197,6 +197,13 @@ function Events() {
             >
               Rock Werchter Festivalpark
             </button>
+            <button
+              onClick={() => {
+                handleFilter(filteredEvents, "Pera Müzesi", "name");
+              }}
+            >
+              Pera Müzesi
+            </button>
           </div>
         </div>
       </div>
@@ -218,7 +225,13 @@ function Events() {
       {filteredEvents.map((item, i) => {
         return (
           <div key={i}>
-            <div>{item.status == "upcoming" && <EventCard props={item} />}</div>
+            {category == "pastevents" ? (
+              <div>{item.status == "past" && <EventCard props={item} />}</div>
+            ) : (
+              <div>
+                {item.status == "upcoming" && <EventCard props={item} />}
+              </div>
+            )}
           </div>
         );
       })}
