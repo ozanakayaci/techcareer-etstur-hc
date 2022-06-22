@@ -33,6 +33,9 @@ const App = () => {
             <Route path="location">
               <Route path=":location" element={<Events />} />
             </Route>
+            <Route path="search">
+              <Route path=":word" element={<Events />} />
+            </Route>
           </Route>
           <Route path="*" component={Error404} />
         </Routes>
