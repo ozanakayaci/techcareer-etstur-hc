@@ -5,22 +5,39 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 function Slider(data) {
-  const [selected, setSelected] = useState(0);
+  const [selected, setSelected] = useState(data.props[0].event_id);
 
   return (
     <div className="slider">
       <div className="slider-photos">
-        <img src={data.props[selected].images[0]} alt="" />
-        <div className="description">{data.props[selected].description}</div>
+        <img
+          src={
+            data.props[
+              data.props.findIndex((object) => {
+                return object.event_id == selected;
+              })
+            ].images[0]
+          }
+          alt=""
+        />
+        <div className="description">
+          {
+            data.props[
+              data.props.findIndex((object) => {
+                return object.event_id == selected;
+              })
+            ].description
+          }
+        </div>
       </div>
       <div className="slider-event">
         {data.props.map((item, i) => {
           if (i < 7 && item.status != "past") {
             return (
               <div
-                onMouseEnter={() => setSelected(item.event_id - 1)}
+                onMouseEnter={() => setSelected(item.event_id)}
                 className={`cards ${
-                  item.event_id == selected + 1 ? "selected-card" : ""
+                  item.event_id == selected ? "selected-card" : ""
                 }`}
                 key={i}
               >
