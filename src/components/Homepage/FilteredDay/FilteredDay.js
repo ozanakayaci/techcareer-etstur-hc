@@ -25,6 +25,10 @@ function FilteredDay() {
     },
   ]);
 
+  const sortedData = [...data].sort((a, b) => {
+    return new Date(a.date) - new Date(b.date);
+  });
+
   return (
     <div className="date-filter">
       <h1>Select Date</h1>
@@ -39,7 +43,7 @@ function FilteredDay() {
         />
       </div>
       <div className="filtered-days">
-        {data.map((item, i) => {
+        {sortedData.map((item, i) => {
           let tempDate = new Date(item.date);
           let date = `${tempDate}`;
 
