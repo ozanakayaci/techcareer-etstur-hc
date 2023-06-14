@@ -32,7 +32,7 @@ function Slider(data) {
       </div>
       <div className="slider-event">
         {data.props.map((item, i) => {
-          if (i < 7 && item.status != "past") {
+          if (i < 6 && item.status != "past") {
             return (
               <div
                 onMouseEnter={() => setSelected(item.event_id)}
