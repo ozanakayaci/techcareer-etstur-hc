@@ -37,7 +37,7 @@ const App = () => {
               <Route path=":word" element={<Events />} />
             </Route>
           </Route>
-          <Route path="*" component={Error404} />
+          <Route path="*" component={<Error404 />} />
         </Routes>
       </div>
     </div>
