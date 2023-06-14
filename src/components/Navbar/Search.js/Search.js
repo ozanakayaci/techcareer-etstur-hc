@@ -12,7 +12,6 @@ function Search() {
 
   let handleChange = (e) => {
     setFilteredWord(e.target.value);
-    console.log(filteredWord);
   };
 
   return (

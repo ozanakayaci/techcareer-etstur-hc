@@ -62,7 +62,6 @@ function Events() {
     handleFilter(data, filterWord);
   }, [filterWord]);
 
-  console.log(filteredEvents);
   return (
     <div>
       <div className="filters">
